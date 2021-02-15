@@ -1,0 +1,15 @@
+fastlane command line
+upload>>
+fastlane supply --aab app/release/app-release.aab
+fastlane supply --aab app/build/outputs/bundle/release/app-release.aab
+
+
+bundle signed check commandline(in wsl)
+keytool.exe -list -printcert -jarfile app-release.aab
+(in cmd)
+keytool -list -printcert -jarfile ./app-release.aab
+
+
+(in cmd)
+ gradlew clean test bundleRelease && keytool -list -printcert -jarfile app/build/outputs/bundle/release/app-release.aab && wsl -e fastlane supply --aab app/build/outputs/bundle/release/app-release.aab
+
