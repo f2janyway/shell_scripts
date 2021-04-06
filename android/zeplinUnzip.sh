@@ -11,6 +11,6 @@ do
                 #                                               res에 drawable들
 을 압축푼다.
                 unzip "${file}" -d $drawable
-               # rm "${file}"
+               f rm "${file}"
         fi
 done
