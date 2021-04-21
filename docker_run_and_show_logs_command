@@ -1,0 +1,4 @@
+make .sh
+ssh -i {YOUR_FILE}.pem ec2-user@{YOUR_NUM} # run from terminal
+
+#docker ps --format "{{.Names}}" | grep "YOUR_SEARCH_IF_MULTIPLE_CONTAIER*" | xargs docker logs -f # run from docker
